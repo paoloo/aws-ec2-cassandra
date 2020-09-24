@@ -2,11 +2,11 @@
 variable "region"           { default     = "us-west-2"                      }
 variable "instance_type"    { default     = "t2.micro"                       }
 variable "public_key"       { default     = "paolo-ff" }
-variable "private_key"      { default     = "/Users/paolo/.ssh/ff/forte/paolo-ff.pem" }
+variable "private_key"      { default     = "/Users/paolo/.ssh/aws-key.pem" }
 /* ========================================================================= */
 provider "aws" {
   shared_credentials_file = "$HOME/.aws/credentials"
-  profile                 = "rally"
+  profile                 = "aws-test"
   region                  = "${var.region}"
 }
 /* ========================================================================= */
